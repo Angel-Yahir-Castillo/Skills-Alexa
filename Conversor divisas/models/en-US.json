@@ -1,0 +1,255 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "currency converter",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ConvertirEuroDolar",
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "can you convert {cantidad} euros to dollars"
+                    ]
+                },
+                {
+                    "name": "ConvertirEuroPesos",
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "can you convert {cantidad} euros to pesos"
+                    ]
+                },
+                {
+                    "name": "ConvertirDolarEuro",
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "can you convert {cantidad} dollars to euros"
+                    ]
+                },
+                {
+                    "name": "ConvertirDolarPesos",
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "can you convert {cantidad} dollars to pesos"
+                    ]
+                },
+                {
+                    "name": "ConvertirPesosEuro",
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "can you convert {cantidad} pesos to euros"
+                    ]
+                },
+                {
+                    "name": "ConvertirPesosDolar",
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "can you convert {cantidad} pesos to dollars"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "ConvertirEuroDolar",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1419738492904.372874132723"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ConvertirEuroPesos",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.572199188170.329682210623"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ConvertirDolarEuro",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.160952278334.1238409408041"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ConvertirDolarPesos",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.127116137963.1588294342596"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ConvertirPesosEuro",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.375172168108.831506585437"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ConvertirPesosDolar",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "cantidad",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.933228648406.1220523467029"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1419738492904.372874132723",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "La cantidad es requerida, y debe ser igual o mayor a uno"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.572199188170.329682210623",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "La cantidad es requerida y no puede ser cero o menor"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.160952278334.1238409408041",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "La cantidad es requerida y no puede ser cero o menor"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.127116137963.1588294342596",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "La cantidad es requerida y no puede ser cero o menor"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.375172168108.831506585437",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "La cantidad es requerida y no puede ser cero o menor"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.933228648406.1220523467029",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "La cantidad es requerida y no puede ser cero o menor"
+                    }
+                ]
+            }
+        ]
+    }
+}

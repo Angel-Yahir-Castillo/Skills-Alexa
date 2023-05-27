@@ -1,0 +1,273 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "calculadora yahir",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "SumarIntent",
+                    "slots": [
+                        {
+                            "name": "valorUno",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "valorDos",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "cuanto es {valorUno} mas {valorDos}",
+                        "suma {valorUno} mas {valorDos}"
+                    ]
+                },
+                {
+                    "name": "RestarIntent",
+                    "slots": [
+                        {
+                            "name": "valorUno",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "valorDos",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "cuanto es {valorUno} menos {valorDos}",
+                        "resta {valorUno} menos {valorDos}"
+                    ]
+                },
+                {
+                    "name": "MultiplicarIntent",
+                    "slots": [
+                        {
+                            "name": "valorUno",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "valorDos",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "cuanto es {valorUno} por {valorDos}",
+                        "multiplica {valorUno} por {valorDos}"
+                    ]
+                },
+                {
+                    "name": "DividirIntent",
+                    "slots": [
+                        {
+                            "name": "valorUno",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "valorDos",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "cuanto es {valorUno} entre {valorDos}",
+                        "divide {valorUno} entre {valorDos}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "SumarIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "valorUno",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.769761073105.848444457206"
+                            }
+                        },
+                        {
+                            "name": "valorDos",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.769761073105.1668247928867"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "RestarIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "valorUno",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.246641989771.681889898762"
+                            }
+                        },
+                        {
+                            "name": "valorDos",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.246641989771.658513267228"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MultiplicarIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "valorUno",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.982622053925.1667637612318"
+                            }
+                        },
+                        {
+                            "name": "valorDos",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.982622053925.6647312020"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DividirIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "valorUno",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1542894484325.1179553964223"
+                            }
+                        },
+                        {
+                            "name": "valorDos",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1542894484325.575466921470"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.769761073105.1668247928867",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "El segundo valor es requerido"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.769761073105.848444457206",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "El primer valor es requerido"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.246641989771.681889898762",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "El primer valor es requerido"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.246641989771.658513267228",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "El segundo valor es requerido"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.982622053925.1667637612318",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "El primer valor es requerido"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.982622053925.6647312020",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "El segundo valor es requerido"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1542894484325.1179553964223",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "El primer valor es requerido"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1542894484325.575466921470",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "El segundo valor es requerido"
+                    }
+                ]
+            }
+        ]
+    }
+}

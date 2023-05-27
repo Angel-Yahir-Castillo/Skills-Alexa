@@ -1,0 +1,84 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "curiosidades de programacion",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "ayuda",
+                        "Que hace esta skill",
+                        "como usar",
+                        "como uso la skill"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "cierra la skill",
+                        "cierra curiosidades de programacion",
+                        "cerrar",
+                        "adios ",
+                        "hasta luego"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CustomLanguageIntent",
+                    "slots": [
+                        {
+                            "name": "language",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "dime algo sobre {language}",
+                        "prueba {language}",
+                        "que sabes de {language}",
+                        "dame una curiosidad sobre {language}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CustomLanguageIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "language",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1141988490769.1539824304892"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1141988490769.1539824304892",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "No tengo referencias a ese lenguaje, pudes probar con otro, trata diciendo que sabes de javascript"
+                    }
+                ]
+            }
+        ]
+    }
+}
