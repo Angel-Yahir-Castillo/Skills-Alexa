@@ -1,0 +1,257 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "code power",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RegisterNameIntent",
+                    "slots": [
+                        {
+                            "name": "nombre",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "my name is {nombre}",
+                        "i am {nombre}"
+                    ]
+                },
+                {
+                    "name": "IniciarCuestionarioIntent",
+                    "slots": [],
+                    "samples": [
+                        "start evaluation",
+                        "start exam",
+                        "start test"
+                    ]
+                },
+                {
+                    "name": "RegisterAnswerIntent",
+                    "slots": [
+                        {
+                            "name": "answer",
+                            "type": "TipoRespuesta"
+                        }
+                    ],
+                    "samples": [
+                        "the answer is {answer}",
+                        "is {answer}",
+                        "i think it's {answer}"
+                    ]
+                },
+                {
+                    "name": "TerminarCuestionarioIntent",
+                    "slots": [],
+                    "samples": [
+                        "finish exam",
+                        "finish test",
+                        "finish evaluation"
+                    ]
+                },
+                {
+                    "name": "ContinarCuestionarioIntent",
+                    "slots": [],
+                    "samples": [
+                        "next question"
+                    ]
+                },
+                {
+                    "name": "IniciarCursoIntent",
+                    "slots": [],
+                    "samples": [
+                        "start lesson",
+                        "course data types",
+                        "course",
+                        "start course"
+                    ]
+                },
+                {
+                    "name": "SiguienteDiapositivaIntent",
+                    "slots": [],
+                    "samples": [
+                        "another slide",
+                        "next slide",
+                        "more information",
+                        "next"
+                    ]
+                },
+                {
+                    "name": "AnteriorDiapositivaIntent",
+                    "slots": [],
+                    "samples": [
+                        "back",
+                        "back off",
+                        "previous slide",
+                        "previous"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "TipoRespuesta",
+                    "values": [
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "C",
+                                "synonyms": [
+                                    "c"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "B",
+                                "synonyms": [
+                                    "b"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "A",
+                                "synonyms": [
+                                    "a"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "RegisterAnswerIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "answer",
+                            "type": "TipoRespuesta",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.671500465024.961418823107"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.671500465024.961418823107.497254392875"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "IniciarCuestionarioIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1682329807358"
+                    },
+                    "slots": []
+                },
+                {
+                    "name": "TerminarCuestionarioIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1008671231063"
+                    },
+                    "slots": []
+                },
+                {
+                    "name": "RegisterNameIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "nombre",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.120422595711.115723223497"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.671500465024.961418823107",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "the answer is necessary"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.671500465024.961418823107.497254392875",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "That answer is not in the options"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1682329807358",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to start the evaluation?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Are you sure to start the test?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1008671231063",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you sure you want to finish the test?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.120422595711.115723223497",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "tell me your name"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "your name is necessary"
+                    }
+                ]
+            }
+        ]
+    }
+}

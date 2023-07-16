@@ -1,0 +1,43 @@
+{
+    "respuestaDataSource": {
+        "title": "Cuestionario sobre tipos de datos",
+        "puntuacion": "tu puntuacion es: 1 respuestas correctas de 3 . Puedes pasar a la siguiente pregunta o finalizar el examen diciendo 'Finalizar examen'",
+        "evaluado": "Respuesta Correcta",
+        "imagenSource": "https://static.vecteezy.com/system/resources/previews/010/142/101/original/check-mark-icon-sign-symbol-design-free-png.png",
+        "color": "green"
+    }
+},
+{
+    "cuestionarioDataSource": {
+        "title": "Cuestionario sobre tipos de datos",
+        "numPregunt": "Pregunta 1",
+        "pregunta": "¿Cuál de los siguientes es un tipo de dato entero?, Respuestas:",
+        "respuestas": "A) 3.14, B) 'Hola', C) 42",
+        "imagenSource": "https://www.igualia.com/images/icono-cuestionario-evaluacion.png",
+        "pie": "Debes decir: la respuesta es A"
+    }
+},
+{
+    "plantillaDataSource": {
+        "primaryText": "Bienvenido, aqui aprenderas a programar. Puedes elegir algun tema como tipos de datos o declaracion de variables.",
+        "imagenSource": "https://pa1.aminoapps.com/6661/9838d313f21c1eb36f57d2b9e2c7a0279d525aa1_hq.gif"
+    }
+},
+{
+    "diapositivasDataSource": {
+        "primaryText": "Diccionarios",
+        "secondaryText": "Representan una colección de pares clave-valor. Cada elemento se almacena como una clave y su correspondiente valor. Se utilizan para buscar y almacenar datos de manera eficiente. Ejemplo: {'nombre': 'Juan', 'edad': 25, 'ciudad': 'Madrid'}.",
+        "colorPrimary": "black",
+        "colorSecondary": "#143D59",
+        "pie": "You can say: Next or Previus"
+    }
+},
+{
+    "complementosDataSource": {
+        "primaryText": " Nombre guardado",
+        "secondaryText": "Hola Angel , ahora puedes tomar el curso de tipos de datos o iniciar la evaluacion.",
+        "imagenSource": "https://www.playgreens.com/wp-content/uploads/2017/07/ok.png",
+        "colorPrimary": "red",
+        "colorSecondary": "green"
+    }
+}
