@@ -1,0 +1,657 @@
+{
+    "document": {
+        "type": "APL",
+        "version": "2023.1",
+        "theme": "dark",
+        "import": [
+            {
+                "name": "alexa-styles",
+                "version": "1.6.0"
+            },
+            {
+                "name": "alexa-layouts",
+                "version": "1.7.0"
+            },
+            {
+                "name": "alexa-viewport-profiles",
+                "version": "1.4.0"
+            }
+        ],
+        "mainTemplate": {
+            "parameters": [
+                "respuestaDataSource"
+            ],
+            "items": [
+                {
+                    "type": "Container",
+                    "width": "100%",
+                    "height": "100%",
+                    "items": [
+                        {
+                            "type": "AlexaBackground",
+                            "when": "${@viewportProfile == @hubRoundSmall}",
+                            "backgroundColor": "#F4B41A"
+                        },
+                        {
+                            "type": "AlexaHeader",
+                            "when": "${@viewportProfile == @hubRoundSmall}",
+                            "headerBackgroundColor": "#143D59",
+                            "headerTitle": "Code Power"
+                        },
+                        {
+                            "type": "Container",
+                            "top": "15%",
+                            "left": "15%",
+                            "width": "70%",
+                            "when": "${@viewportProfile == @hubRoundSmall}",
+                            "items": [
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubRoundSmall}",
+                                    "text": "${respuestaDataSource.title}",
+                                    "color": "#fff",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "35px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubRoundSmall}",
+                                    "text": "${respuestaDataSource.evaluado}",
+                                    "color": "${respuestaDataSource.color}",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "30px",
+                                    "fontWeight": "bold"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AlexaBackground",
+                            "when": "${@viewportProfile == @hubLandscapeSmall}",
+                            "backgroundColor": "#F4B41A"
+                        },
+                        {
+                            "type": "AlexaHeader",
+                            "when": "${@viewportProfile == @hubLandscapeSmall}",
+                            "headerBackgroundColor": "#143D59",
+                            "headerTitle": "Code power",
+                            "headerAttributionImage": "https://prophysio.tagme.uno/public/iconos/programacion.png"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "when": "${@viewportProfile == @hubLandscapeSmall}",
+                            "imageSource": "${respuestaDataSource.imagenSource}",
+                            "alignSelf": "start",
+                            "top": "12%",
+                            "left": "5%"
+                        },
+                        {
+                            "type": "Container",
+                            "bottom": "40%",
+                            "left": "35%",
+                            "width": "65%",
+                            "when": "${@viewportProfile == @hubLandscapeSmall}",
+                            "items": [
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubLandscapeSmall}",
+                                    "text": "${respuestaDataSource.title}",
+                                    "color": "#fff",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "35px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubLandscapeSmall}",
+                                    "text": "${respuestaDataSource.evaluado}",
+                                    "color": "${respuestaDataSource.color}",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "30px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubLandscapeSmall}",
+                                    "text": "${respuestaDataSource.puntuacion}",
+                                    "color": "#000",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "left",
+                                    "fontSize": "25px",
+                                    "fontWeight": "bold"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AlexaBackground",
+                            "when": "${@viewportProfile == @hubLandscapeMedium}",
+                            "backgroundColor": "#F4B41A"
+                        },
+                        {
+                            "type": "AlexaHeader",
+                            "when": "${@viewportProfile == @hubLandscapeMedium}",
+                            "headerBackgroundColor": "#143D59",
+                            "headerTitle": "code power",
+                            "headerAttributionImage": "https://prophysio.tagme.uno/public/iconos/programacion.png"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "when": "${@viewportProfile == @hubLandscapeMedium}",
+                            "imageSource": "${respuestaDataSource.imagenSource}",
+                            "alignSelf": "start",
+                            "top": "12%",
+                            "left": "5%"
+                        },
+                        {
+                            "type": "Container",
+                            "bottom": "35%",
+                            "left": "38%",
+                            "width": "58%",
+                            "when": "${@viewportProfile == @hubLandscapeMedium}",
+                            "items": [
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubLandscapeMedium}",
+                                    "text": "${respuestaDataSource.title}",
+                                    "color": "#fff",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "40px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubLandscapeMedium}",
+                                    "text": "${respuestaDataSource.evaluado}",
+                                    "color": "${respuestaDataSource.color}",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "30px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubLandscapeMedium}",
+                                    "text": "${respuestaDataSource.puntuacion}",
+                                    "color": "#000",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "left",
+                                    "fontSize": "30px",
+                                    "fontWeight": "bold"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AlexaBackground",
+                            "when": "${@viewportProfile == @hubPortraitMedium}",
+                            "backgroundColor": "#F4B41A"
+                        },
+                        {
+                            "type": "AlexaHeader",
+                            "when": "${@viewportProfile == @hubPortraitMedium}",
+                            "headerBackgroundColor": "#143D59",
+                            "headerTitle": "code power",
+                            "headerAttributionImage": "https://prophysio.tagme.uno/public/iconos/programacion.png"
+                        },
+                        {
+                            "type": "Text",
+                            "when": "${@viewportProfile == @hubPortraitMedium}",
+                            "text": "${respuestaDataSource.title}",
+                            "color": "#fff",
+                            "top": "5%",
+                            "fontFamily": "Arial",
+                            "textAlign": "center",
+                            "fontSize": "70px",
+                            "fontWeight": "bold"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "when": "${@viewportProfile == @hubPortraitMedium}",
+                            "imageSource": "${respuestaDataSource.imagenSource}",
+                            "alignSelf": "center",
+                            "top": "10%"
+                        },
+                        {
+                            "type": "Container",
+                            "top": "15%",
+                            "left": "10%",
+                            "width": "80%",
+                            "when": "${@viewportProfile == @hubPortraitMedium}",
+                            "items": [
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubPortraitMedium}",
+                                    "text": "${respuestaDataSource.evaluado}",
+                                    "color": "${respuestaDataSource.color}",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "70px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubPortraitMedium}",
+                                    "text": " ",
+                                    "fontSize": "60px"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubPortraitMedium}",
+                                    "text": "${respuestaDataSource.puntuacion}",
+                                    "color": "#000",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "left",
+                                    "fontSize": "65px",
+                                    "fontWeight": "bold"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AlexaBackground",
+                            "when": "${@viewportProfile == @hubLandscapeLarge}",
+                            "backgroundColor": "#F4B41A"
+                        },
+                        {
+                            "type": "AlexaHeader",
+                            "when": "${@viewportProfile == @hubLandscapeLarge}",
+                            "headerBackgroundColor": "#143D59",
+                            "headerTitle": "code power",
+                            "headerAttributionImage": "https://prophysio.tagme.uno/public/iconos/programacion.png"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "when": "${@viewportProfile == @hubLandscapeLarge}",
+                            "imageSource": "${respuestaDataSource.imagenSource}",
+                            "alignSelf": "start",
+                            "top": "12%",
+                            "left": "5%"
+                        },
+                        {
+                            "type": "Container",
+                            "bottom": "45%",
+                            "left": "45%",
+                            "width": "50%",
+                            "when": "${@viewportProfile == @hubLandscapeLarge}",
+                            "items": [
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubLandscapeLarge}",
+                                    "text": "${respuestaDataSource.title}",
+                                    "color": "#fff",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "50px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubLandscapeLarge}",
+                                    "text": "${respuestaDataSource.evaluado}",
+                                    "color": "${respuestaDataSource.color}",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "40px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubLandscapeLarge}",
+                                    "text": "${respuestaDataSource.puntuacion}",
+                                    "color": "#000",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "left",
+                                    "fontSize": "45px",
+                                    "fontWeight": "bold"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AlexaBackground",
+                            "when": "${@viewportProfile == @hubLandscapeXLarge}",
+                            "backgroundColor": "#F4B41A"
+                        },
+                        {
+                            "type": "AlexaHeader",
+                            "when": "${@viewportProfile == @hubLandscapeXLarge}",
+                            "headerBackgroundColor": "#143D59",
+                            "headerTitle": "code power",
+                            "headerAttributionImage": "https://prophysio.tagme.uno/public/iconos/programacion.png"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "when": "${@viewportProfile == @hubLandscapeXLarge}",
+                            "imageSource": "${respuestaDataSource.imagenSource}",
+                            "alignSelf": "start",
+                            "top": "16%",
+                            "left": "8%",
+                            "height": "600px",
+                            "width": "600px"
+                        },
+                        {
+                            "type": "Container",
+                            "bottom": "34%",
+                            "left": "45%",
+                            "width": "50%",
+                            "when": "${@viewportProfile == @hubLandscapeXLarge}",
+                            "items": [
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubLandscapeXLarge}",
+                                    "text": "${respuestaDataSource.title}",
+                                    "color": "#fff",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "70px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubLandscapeXLarge}",
+                                    "text": "${respuestaDataSource.evaluado}",
+                                    "color": "${respuestaDataSource.color}",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "60px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @hubLandscapeXLarge}",
+                                    "text": "${respuestaDataSource.puntuacion}",
+                                    "color": "#000",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "left",
+                                    "fontSize": "55px",
+                                    "fontWeight": "bold"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AlexaBackground",
+                            "when": "${@viewportProfile == @tvLandscapeXLarge}",
+                            "backgroundColor": "#F4B41A"
+                        },
+                        {
+                            "type": "AlexaHeader",
+                            "when": "${@viewportProfile == @tvLandscapeXLarge}",
+                            "headerBackgroundColor": "#143D59",
+                            "headerTitle": "code power",
+                            "headerAttributionImage": "https://prophysio.tagme.uno/public/iconos/programacion.png"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "when": "${@viewportProfile == @tvLandscapeXLarge}",
+                            "imageSource": "${respuestaDataSource.imagenSource}",
+                            "alignSelf": "start",
+                            "top": "12%",
+                            "left": "5%"
+                        },
+                        {
+                            "type": "Container",
+                            "bottom": "45%",
+                            "left": "45%",
+                            "width": "55%",
+                            "when": "${@viewportProfile == @tvLandscapeXLarge}",
+                            "items": [
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @tvLandscapeXLarge}",
+                                    "text": "${respuestaDataSource.title}",
+                                    "color": "#fff",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "70px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @tvLandscapeXLarge}",
+                                    "text": " ",
+                                    "color": "#000",
+                                    "fontSize": "30px"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @tvLandscapeXLarge}",
+                                    "text": "${respuestaDataSource.evaluado}",
+                                    "color": "${respuestaDataSource.color}",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "60px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @tvLandscapeXLarge}",
+                                    "text": " ",
+                                    "color": "#000",
+                                    "fontSize": "30px"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @tvLandscapeXLarge}",
+                                    "text": "${respuestaDataSource.puntuacion}",
+                                    "color": "#000",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "left",
+                                    "fontSize": "55px",
+                                    "fontWeight": "bold"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AlexaBackground",
+                            "when": "${@viewportProfile == @mobileSmall}",
+                            "backgroundColor": "#F4B41A"
+                        },
+                        {
+                            "type": "AlexaHeader",
+                            "when": "${@viewportProfile == @mobileSmall}",
+                            "headerBackgroundColor": "#143D59",
+                            "headerTitle": "code power",
+                            "headerAttributionImage": "https://prophysio.tagme.uno/public/iconos/programacion.png"
+                        },
+                        {
+                            "type": "Text",
+                            "when": "${@viewportProfile == @mobileSmall}",
+                            "text": "${respuestaDataSource.title}",
+                            "color": "#fff",
+                            "top": "5%",
+                            "fontFamily": "Arial",
+                            "textAlign": "center",
+                            "fontSize": "40px",
+                            "fontWeight": "bold"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "when": "${@viewportProfile == @mobileSmall}",
+                            "imageSource": "${respuestaDataSource.imagenSource}",
+                            "alignSelf": "center",
+                            "top": "7%",
+                            "width": "400px"
+                        },
+                        {
+                            "type": "Container",
+                            "top": "10%",
+                            "left": "10%",
+                            "width": "80%",
+                            "when": "${@viewportProfile == @mobileSmall}",
+                            "items": [
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @mobileSmall}",
+                                    "text": "${respuestaDataSource.evaluado}",
+                                    "color": "${respuestaDataSource.color}",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "35px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @mobileSmall}",
+                                    "text": "${respuestaDataSource.puntuacion}",
+                                    "color": "#000",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "left",
+                                    "fontSize": "30px",
+                                    "fontWeight": "bold"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AlexaBackground",
+                            "when": "${@viewportProfile == @mobileMedium}",
+                            "backgroundColor": "#F4B41A"
+                        },
+                        {
+                            "type": "AlexaHeader",
+                            "when": "${@viewportProfile == @mobileMedium}",
+                            "headerBackgroundColor": "#143D59",
+                            "headerTitle": "code power",
+                            "headerAttributionImage": "https://prophysio.tagme.uno/public/iconos/programacion.png"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "when": "${@viewportProfile == @mobileMedium}",
+                            "imageSource": "${respuestaDataSource.imagenSource}",
+                            "alignSelf": "start",
+                            "top": "6%",
+                            "left": "7%",
+                            "width": "350px",
+                            "heigth": "350px"
+                        },
+                        {
+                            "type": "Container",
+                            "bottom": "65%",
+                            "left": "45%",
+                            "width": "45%",
+                            "when": "${@viewportProfile == @mobileMedium}",
+                            "items": [
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @mobileMedium}",
+                                    "text": "${respuestaDataSource.title}",
+                                    "color": "#fff",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "40px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @mobileMedium}",
+                                    "text": "${respuestaDataSource.evaluado}",
+                                    "color": "${respuestaDataSource.color}",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "35px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @mobileMedium}",
+                                    "text": " ",
+                                    "color": "#000",
+                                    "fontSize": "20px"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @mobileMedium}",
+                                    "text": "${respuestaDataSource.puntuacion}",
+                                    "color": "#000",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "left",
+                                    "fontSize": "35px",
+                                    "fontWeight": "bold"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AlexaBackground",
+                            "when": "${@viewportProfile == @mobileLarge}",
+                            "backgroundColor": "#F4B41A"
+                        },
+                        {
+                            "type": "AlexaHeader",
+                            "when": "${@viewportProfile == @mobileLarge}",
+                            "headerBackgroundColor": "#143D59",
+                            "headerTitle": "code power",
+                            "headerAttributionImage": "https://prophysio.tagme.uno/public/iconos/programacion.png"
+                        },
+                        {
+                            "type": "AlexaImage",
+                            "when": "${@viewportProfile == @mobileLarge}",
+                            "imageSource": "${respuestaDataSource.imagenSource}",
+                            "alignSelf": "start",
+                            "top": "15%",
+                            "left": "7%",
+                            "width": "700px",
+                            "heigth": "700px"
+                        },
+                        {
+                            "type": "Container",
+                            "bottom": "37%",
+                            "left": "45%",
+                            "width": "50%",
+                            "when": "${@viewportProfile == @mobileLarge}",
+                            "items": [
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @mobileLarge}",
+                                    "text": "${respuestaDataSource.title}",
+                                    "color": "#fff",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "70px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @mobileLarge}",
+                                    "text": "${respuestaDataSource.evaluado}",
+                                    "color": "${respuestaDataSource.color}",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "center",
+                                    "fontSize": "55px",
+                                    "fontWeight": "bold"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @mobileLarge}",
+                                    "text": " ",
+                                    "color": "#000",
+                                    "fontSize": "30px"
+                                },
+                                {
+                                    "type": "Text",
+                                    "when": "${@viewportProfile == @mobileLarge}",
+                                    "text": "${respuestaDataSource.puntuacion}",
+                                    "color": "#000",
+                                    "fontFamily": "Arial",
+                                    "textAlign": "left",
+                                    "fontSize": "60px",
+                                    "fontWeight": "bold"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "datasources": {
+        "respuestaDataSource": {
+            "title": "Cuestionario sobre tipos de datos",
+            "puntuacion": "tu puntuacion es: 1 respuestas correctas de 3 . Puedes pasar a la siguiente pregunta o finalizar el examen diciendo 'Finalizar examen'",
+            "evaluado": "Respuesta Correcta",
+            "imagenSource": "https://static.vecteezy.com/system/resources/previews/010/142/101/original/check-mark-icon-sign-symbol-design-free-png.png",
+            "color": "green"
+        }
+    },
+    "sources": {}
+}
